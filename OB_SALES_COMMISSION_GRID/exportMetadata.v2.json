@@ -1,0 +1,421 @@
+{
+  "name" : "OB_SALES_COMMISSION_GRID",
+  "sourceOrgId" : "ePQxS27BWujhD1tudGDP4w",
+  "sourceOrgName" : "Pacific Life Insurance Company",
+  "exportedObjects" : [ {
+    "objectGuid" : "bFuWEJgeq8WfDygihXLjwH",
+    "objectName" : "M_OB_SCL_SCL_TBL_PRC_SALES_COMMISSION_GRID_UPSERT",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H17000000000075"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose: Mapping to upsert the process table tbl_prc_sales_commission_grid based on sfdcId from Sql Server SCL tbl_src_sales_commission_grid_SFDC_TO_SCL table which contains the downloaded Commission Grid  firm data from the Salesforce Commission Grid object.\nThis mapping will make sure the process table tbl_prc_sales_commission_grid is always in sync with the Salesforce Commission Grid object.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "b8KKWXSjgMRjAh82xddjKG",
+    "objectName" : "MCT_OB_SF_SCL_TBL_SRC_SALES_COMMISSION_GRID_SFDC_TO_SCL_INS",
+    "objectType" : "MTT",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0Z00000000008B"
+      },
+      "objectRefs" : [ "0PufVIurFmIcBNec3UZy45", "bwHZI1GGWkPbT0oWnRzUMe", "ecewq2iprsgjqXDqXuL4yS", "9IQjV2G9PGpbrzLSYBHlUE" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping Configuration Task to download the Salesforce Commission Grid data to Sql Server SCL tbl_src_sales_commission_grid_SFDC_TO_SCL based on Systemmodstamp  lastruntime",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "7YDQkuSPFREe7Geih2xzOa",
+    "objectName" : "TF_OB_SF_SCL_TBL_SRC_SALES_COMMISSION_GRID_SFDC_TO_SCL",
+    "objectType" : "WORKFLOW",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0N000000000013"
+      },
+      "objectRefs" : [ "b8KKWXSjgMRjAh82xddjKG", "1QLSM0bkT88bZyeACSltEz" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Task Flow to download the Salesforce record type data and load the CDH Sql Server SCL tbl_src_commission_grid_SFDC_TO_SCL through parameter file ",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "1VdqBCS7C53kEywVAdIp02",
+    "objectName" : "ec2_param_path",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0B00000000000X"
+      },
+      "objectRefs" : [ "bwHZI1GGWkPbT0oWnRzUMe" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "bwHZI1GGWkPbT0oWnRzUMe",
+    "objectName" : "ip-10-74-30-7.amf.pacificlife.net",
+    "objectType" : "AgentGroup",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H25000000000004"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "j3OUOJkzh2kicG6KXPovUQ",
+    "objectName" : "OB_SALES_COMMISSION_GRID",
+    "objectType" : "Folder",
+    "path" : "/Explore/SalesForce",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      },
+      "objectExistence" : "WITHOUT_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "ecewq2iprsgjqXDqXuL4yS",
+    "objectName" : "M_OB_SF_SCL_TBL_SRC_SALES_COMMISSION_GRID_SFDC_TO_SCL_INS",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H1700000000006Z"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose: Mapping to download the Salesforce Commission Grid data to Sql Server SCL tbl_src_sales_commission_grid_SFDC_TO_SCL table. \nIdentify delta records from SFDC based on systemModstamp  lastRunTime captured after the previous run data load. lastRunTime is captured as max(systemmodstamp) at the end of the data load.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "9IQjV2G9PGpbrzLSYBHlUE",
+    "objectName" : "SFDC_Sales",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0B00000000001A"
+      },
+      "objectRefs" : [ "bwHZI1GGWkPbT0oWnRzUMe" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "iSJYaEybrgDiIhxsmrqgmK",
+    "objectName" : "MCT_OB_SCL_SCL_TBL_PRC_SALES_COMMISSION_GRID_UPSERT",
+    "objectType" : "MTT",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0Z00000000009F"
+      },
+      "objectRefs" : [ "bFuWEJgeq8WfDygihXLjwH", "0PufVIurFmIcBNec3UZy45", "bwHZI1GGWkPbT0oWnRzUMe" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping Configuration Task to upsert the process table tbl_prc_sales_commission_grid based on sfdcID from Sql Server SCL tbl_src_sales_commission_grid_SFDC_TO_SCL table which contains the downloaded Commission Grid  data from the Salesforce Commission Grid object.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "0PufVIurFmIcBNec3UZy45",
+    "objectName" : "SqlServer_rds_crm_dev",
+    "objectType" : "Connection",
+    "path" : "/SYS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0B000000000002"
+      },
+      "objectRefs" : [ "bwHZI1GGWkPbT0oWnRzUMe" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "02MZxJV5uoQeYi8G8Y5aCj",
+    "objectName" : "TF_OB_SCL_SCL_OB_SALES_COMMISSION_GRID_BATCH",
+    "objectType" : "WORKFLOW",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0N000000000015"
+      },
+      "objectRefs" : [ "2d5I4RjfzGObsCrbSIMBqT" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Task Flow to insert data to history table, update the tbl_batch_audit details and close the batchid in tbl_batch table.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "7Di3cF20bEGh6orUsSO6Ey",
+    "objectName" : "TF_OB_SCL_SCL_TBL_PRC_SALES_COMMISSION_GRID",
+    "objectType" : "WORKFLOW",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0N000000000014"
+      },
+      "objectRefs" : [ "iSJYaEybrgDiIhxsmrqgmK" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Task Flow to upsert the process table tbl_prc_sales_commission_grid from Sql Server SCL tbl_src_sales_commission_grid_SFDC_TO_SCL table based on sfdcId.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "14jHFG2GmaBe43tlExzvco",
+    "objectName" : "SalesForce",
+    "objectType" : "Project",
+    "path" : "/Explore",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "objectRefs" : [ ],
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Pacific Life Salesforce",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      },
+      "objectExistence" : "WITHOUT_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "hxqE1Nl3TYhfuWdgOhtxiI",
+    "objectName" : "M_OB_SCL_SCL_OB_SALES_COMMISSION_GRID_BATCH_UPD",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H17000000000096"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose: Mapping to trigger postsql to insert history table and update tbl_batch_audit checksum values and closing the current batchid with batchStatus=CLOSED in tbl_batch.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "2d5I4RjfzGObsCrbSIMBqT",
+    "objectName" : "MCT_OB_SCL_SCL_OB_SALES_COMMISSION_GRID_BATCH_UPD",
+    "objectType" : "MTT",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0Z00000000009Q"
+      },
+      "objectRefs" : [ "0PufVIurFmIcBNec3UZy45", "bwHZI1GGWkPbT0oWnRzUMe", "hxqE1Nl3TYhfuWdgOhtxiI" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping Configuration Task to trigger postsql stored procedure to update the tbl_batch_audit details  close the current batch in tbl_batch table with batchStatus as Closed",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "4M0mUuxsdFigrvdYMfoLaE",
+    "objectName" : "M_OB_SCL_FF_OB_SALES_COMMISSION_GRID_PARAMETER_INS",
+    "objectType" : "DTEMPLATE",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H170000000000DL"
+      },
+      "objectRefs" : [ ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Purpose : Mapping to trigger presql stored procedure to create the new batchid in tbl_batch table for the current batch integration run and to generate the parameter file in userparamters secure agent folder for integrationName=OB_SALES_COMMISSION_GRID using Sql Server SCL tbl_param_data and tbl_control tables.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  }, {
+    "objectGuid" : "1QLSM0bkT88bZyeACSltEz",
+    "objectName" : "MCT_OB_SCL_FF_OB_SALES_COMMISSION_GRID_PARAMETER_INS",
+    "objectType" : "MTT",
+    "path" : "/Explore/SalesForce/OB_SALES_COMMISSION_GRID",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01021H0Z0000000000E8"
+      },
+      "objectRefs" : [ "0PufVIurFmIcBNec3UZy45", "bwHZI1GGWkPbT0oWnRzUMe", "1VdqBCS7C53kEywVAdIp02", "4M0mUuxsdFigrvdYMfoLaE" ],
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Mapping configuration task to trigger presql stored procedure and to generate parameter file OB_SALES_COMMISSION_GRID.par for integrationName=OB_SALES_COMMISSION_GRID using Sql Server SCL tbl_param_data and tbl_control tables.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      },
+      "objectExistence" : "WITH_DEPENDENCIES"
+    }
+  } ]
+}
